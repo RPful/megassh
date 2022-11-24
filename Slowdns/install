@@ -43,15 +43,15 @@ fun_att () {
 apt install ncurses-utils -y
 mkdir /etc/slowdns
 cd /etc/slowdns
-wget https://github.com/RPVIP/SLOWDDS/raw/main/dns-server; chmod +x dns-server
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/remove-slow; chmod +x remove-slow
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/slowdns-info; chmod +x slowdns-info
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/slowdns-drop; chmod +x slowdns-drop
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/slowdns-ssh; chmod +x slowdns-ssh
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/slowdns-ssl; chmod +x slowdns-ssl
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/slowdns-socks; chmod +x slowdns-socks
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/slowdns; chmod +x slowdns; cp slowdns /bin/
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/stopdns; chmod +x stopdns
+wget https://github.com/RPful/SLOWDDS/raw/main/dns-server; chmod +x dns-server
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/remove-slow; chmod +x remove-slow
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/slowdns-info; chmod +x slowdns-info
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/slowdns-drop; chmod +x slowdns-drop
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/slowdns-ssh; chmod +x slowdns-ssh
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/slowdns-ssl; chmod +x slowdns-ssl
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/slowdns-socks; chmod +x slowdns-socks
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/slowdns; chmod +x slowdns; cp slowdns /bin/
+wget https://raw.githubusercontent.com/RPful/SLOWDDS/main/stopdns; chmod +x stopdns
 }
 fun_bar 'fun_att'
 echo -e "CONFIGURANDO FIREWALL..."
