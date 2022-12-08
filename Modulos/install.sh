@@ -1,4 +1,4 @@
-url='https://github.com/RPVIP/sshplus/CheckUser-master/checkuser'
+url='https://github.com/RPful/megassh/CheckUser-master/checkuser'
 
 cd ~
 
