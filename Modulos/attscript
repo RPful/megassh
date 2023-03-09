@@ -132,7 +132,7 @@ vrs2=$(sed -n '1 p' /tmp/att | sed -e 's/[^0-9]//ig')
 
     sleep 3
 
-   rm Plus && wget https://www.dropbox.com/s/1c73ebrel0q91eu/Plus > /dev/null 2>&1
+   wget https://www.dropbox.com/s/1c73ebrel0q91eu/Plus > /dev/null 2>&1
 
     chmod +x Plus
 
