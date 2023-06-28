@@ -60,7 +60,7 @@ SCOLOR='\033[0m'
 			slowdns
 		} || {
 			cd $HOME
-			wget https://raw.githubusercontent.com/RPfful/sshplus/megassh/Slowdns/install -o /dev/null
+			wget https://raw.githubusercontent.com/RPful/sshplus/megassh/Slowdns/install -o /dev/null
 			chmod 777 install
 			./install
 		}
