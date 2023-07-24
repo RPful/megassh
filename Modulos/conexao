@@ -1674,12 +1674,12 @@ exit 0' >$RCLOCAL
 				verif_ptrs $porta
 				fun_iniwssocks() {
 					sleep 1
-					screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg="$(cat /etc/mamalista2) - <span style="color:#bb1cf6">M</span><span style="color:#a438f1">E</span><span style="color:#8c54ed">G</span><span style="color:#7570e8">A</span><span style="color:#5d8ce3">S</span><span style="color:#46a8df">S</span><span style="color:#2ec4da">H</span><span style="color:#17e0d5">B</span><span style="color:#00fdd1">R</span>"
+					screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg="$(cat /etc/mamalista2) - 
 					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2) - <span style="color:#bb1cf6">M</span><span style="color:#a438f1">E</span><span style="color:#8c54ed">G</span><span style="color:#7570e8">A</span><span style="color:#5d8ce3">S</span><span style="color:#46a8df">S</span><span style="color:#2ec4da">H</span><span style="color:#17e0d5">B</span><span style="color:#00fdd1">R</span>'" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2)  " >>/etc/autostart
 					} || {
 						sed -i '/WebSocket/d' /etc/autostart
-						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2) - <span style="color:#bb1cf6">M</span><span style="color:#a438f1">E</span><span style="color:#8c54ed">G</span><span style="color:#7570e8">A</span><span style="color:#5d8ce3">S</span><span style="color:#46a8df">S</span><span style="color:#2ec4da">H</span><span style="color:#17e0d5">B</span><span style="color:#00fdd1">R</span>'" >>/etc/autostart
+						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2)  " >>/etc/autostart
 					}
 				}
 				echo ""
