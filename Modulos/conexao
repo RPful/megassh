@@ -1674,7 +1674,7 @@ exit 0' >$RCLOCAL
 				verif_ptrs $porta
 				fun_iniwssocks() {
 					sleep 1
-					screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg="$(cat /etc/mamalista2) - 
+					screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg="$(cat /etc/mamalista2)
 					[[ $(grep -wc "WebSocket" /etc/autostart) = '0' ]] && {
 						echo -e "screen -dmS novoWS /etc/SSHPlus/WebSocket -proxy_port 0.0.0.0:$(cat /etc/mamalista) -msg='$(cat /etc/mamalista2)  " >>/etc/autostart
 					} || {
