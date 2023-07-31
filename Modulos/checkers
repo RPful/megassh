@@ -23,7 +23,7 @@
             bash <(curl -sL https://raw.githubusercontent.com/RPful/checks/main/MenuDT.sh)
             ;;
             3 | 03)
-            bash <(curl -sL https://raw.githubusercontent.com/ScottBrabo/CheckUser/master/install.sh)
+            bash <(curl -sL https://raw.githubusercontent.com/RPful/CheckUser/main/install.sh)
             ;;
             4 | 04)
             bash <(wget -qO- https://raw.githubusercontent.com/RPful/checks/main/AnyChk)
