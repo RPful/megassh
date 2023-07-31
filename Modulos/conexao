@@ -1662,7 +1662,7 @@ exit 0' >$RCLOCAL
 				read -p "$(echo -e "★ \033[1;32mQUAL PORTA MEU MANO? \033[1;37m")" -e -i 80 cuzin
 				echo "$cuzin" > /etc/mamalista
 				echo ""
-				read -p "$(echo -e "★ \033[1;32m QUAL MENSAGEM QUER? \033[1;37m")" -e -i WebSecurity cuzin2
+				read -p "$(echo -e "★ \033[1;32m QUAL MENSAGEM QUER? \033[1;37m")" -e -i MEGASSH cuzin2
 				rm -rf /etc/mamalista2
 				echo "$cuzin2" > /etc/mamalista2
 				[[ -z "cuzin" ]] && {
