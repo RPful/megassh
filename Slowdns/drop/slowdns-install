@@ -55,7 +55,7 @@ service iptables restart
 fun_bar 'install_pkgs'
 echo -e "BAIXANDO BINARIO DNSTT..."
 download_dnstt () {
-cd /root && wget https://raw.githubusercontent.com/RPVIP/main/dns-server
+cd /root && wget https://raw.githubusercontent.com/RPful/megassh/Slowdns/main/dns-server
 chmod +x dns-server
 }
 fun_bar 'download_dnstt'
@@ -63,7 +63,7 @@ echo -e "CONFIGURANDO IPTABLES..." | pv -qL 10
 ipt_set () {
 cd /etc 
 rm -rf rc.local
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/rc.local
+wget https://raw.githubusercontent.com/RPful/megassh/Slowdns/main/rc.local
 chmod +x /etc/rc.local
 systemctl enable rc-local
 systemctl start rc-local
@@ -78,8 +78,8 @@ cd /root
 touch infons
 echo $nameserver >> infons
 sleep 1
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/drop/startdns
-wget https://raw.githubusercontent.com/RPVIP/SLOWDDS/main/drop/restartdns 
+wget https://raw.githubusercontent.com/RPful/megassh/Slowdns/main/drop/startdns
+wget https://raw.githubusercontent.com/RPful/megassh/Slowdns/main/drop/restartdns 
 chmod +x startdns
 chmod +x restartdns
 sed -i "s;1234;$nameserver;g" /root/startdns > /dev/null 2>&1
