@@ -1895,7 +1895,7 @@ exit 0' >$RCLOCAL
 				sleep 2
 				fun_socks
 			fi
-		elif [[ "$resposta" = '6' ]]; then
+		elif [[ "$resposta" = '7' ]]; then
 			if ps x | grep -w wsproxy.py | grep -v grep 1>/dev/null 2>/dev/null; then
 				clear
 				msgsocks=$(cat /etc/SSHPlus/wsproxy.py | grep -E "MSG =" | awk -F = '{print $2}' | cut -d "'" -f 2)
