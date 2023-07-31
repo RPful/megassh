@@ -2248,7 +2248,7 @@ exit 0' >$RCLOCAL
 				fun_chisel
 				;;
 			9 | 09)
-				slow_setup
+				slow_dns
 				;;
 			10 | 10)
 				v2raymanager
