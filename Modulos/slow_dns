@@ -61,7 +61,7 @@ initslow() {
         elif [[ "$op" == '3' ]]; then
             [[ -e $DIR/server.pub ]] && keypub=$(cat $DIR/server.pub) || keypub='Null'
             [[ -e $DIR/autodns ]] && nameserver=$(grep -w 'server.key' /etc/SSHPlus/dns/autodns | awk -F' ' '{print $9}') || nameserver='Null'
-            tmx='curl -sO https://raw.githubusercontent.com/https://github.com/RPful/megassh/main/Slowdns/slowdns && chmod +x slowdns && ./slowdns'
+            tmx='curl -sO https://raw.githubusercontent.com/RPful/megassh/main/Slowdns/slowdns && chmod +x slowdns && ./slowdns'
             clear
             echo -e "${CORTITLE}           SSHPLUS SLOWDNS (Beta)            ${SCOLOR}"
             echo -e "\n${YELLOW}NAMESERVER(NS)${SCOLOR}: $nameserver"
