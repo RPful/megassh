@@ -2263,7 +2263,7 @@ exit 0' >$RCLOCAL
 			}
 
 			[[ "$(netstat -tlpn | grep -E 'python|proxydt|security' | wc -l)" != '0' ]] && {
-    echo -e "\033[1;32mPROXY SOCKS PORTAS ATIVADAS\033[1;31m: \033[1;37m$(netstat -nplt | grep -E 'python|proxydt|security' | awk '{print $4}' | cut -d: -f2 | xargs)"
+    echo -e "\033[1;32mPROXY  PORTAS ATIVADAS\033[1;32mPORTA: \033[1;37m$(netstat -nplt | grep -E 'python|proxydt|security' | awk '{print $4}' | cut -d: -f2 | xargs)"
     sts8="\033[1;32m◉ "
 } || {
     sts8="\033[1;31m○ "
