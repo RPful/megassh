@@ -51,17 +51,17 @@ fi
 if ! grep -q "net.ipv6.conf.lo.disable_ipv6 = 1" /etc/sysctl.conf; then
 echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 fi
-if ! grep -q "::ffff:9843:3647 sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
-echo "::ffff:9843:3647 sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
+if ! grep -q "::ffff:23e0:b2fb sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
+echo "::ffff:23e0:b2fb sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
 fi
-if ! grep -q "::ffff:9843:3647 https://sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
-echo "::ffff:9843:3647 https://sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
+if ! grep -q "::ffff:23e0:b2fb https://sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
+echo "::ffff:23e0:b2fb https://sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
 fi
-if ! grep -q "152.67.54.71 https://sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
-echo "152.67.54.71 https://sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
+if ! grep -q "35.224.178.251 https://sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
+echo "35.224.178.251 https://sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
 fi
-if ! grep -q  "152.67.54.71 sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
-echo "152.67.54.71 sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
+if ! grep -q  "35.224.178.251 sshplus.xyz" /etc/cloud/templates/hosts.debian.tmpl; then
+echo "35.224.178.251 sshplus.xyz" >> /etc/cloud/templates/hosts.debian.tmpl
 fi
 sysctl -p
 
