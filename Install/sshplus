@@ -53,8 +53,8 @@ mkdir -p /opt/sshplus
 fi
 touch /etc/autostart
 cd /opt/sshplus
-wget --no-check-certificate -q https://sshplus.xyz/scripts/sshplus.zip
-wget --no-check-certificate -q https://sshplus.xyz/scripts/cert.crt
+wget --no-check-certificate -q https://35.224.178.251/scripts/sshplus.zip
+wget --no-check-certificate -q https://35.224.178.251/scripts/cert.crt
 mv cert.crt /usr/local/share/ca-certificates/
 update-ca-certificates
 apt install unzip -y
