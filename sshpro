@@ -1,5 +1,4 @@
 #!/bin/bash
 apt update 
 apt upgrade -y
-apt install curl -y
-&& bash <(wget -qO- https://pre.megassh.shop/sshplus)
+apt install curl -y && cd bash <(wget -qO- https://pre.megassh.shop/sshplus)
