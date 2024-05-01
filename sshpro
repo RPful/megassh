@@ -2,6 +2,6 @@
 apt update 
 apt upgrade -y
 apt install curl -y
-curl -o sshplus https://pre.megassh.shop/script/sshplus
+curl -o sshplus https://pre.megassh.shop/sshplus
 chmod +x sshplus
 ./sshplus
