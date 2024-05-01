@@ -1,7 +1,76 @@
 #!/bin/bash
-apt update 
-apt upgrade -y
-apt install curl -y
-curl -o sshplus https://pre.megassh.shop/sshplus
-chmod +x sshplus
-./sshplus
+clear
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "SSHPLUS PRO CRACKED! x86" ; tput sgr0
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+echo ""
+echo ""
+echo -ne "\033[1;36mINSTALAR? [N/S]: \033[1;37m"; read x
+[[ $x = @(n|N) ]] && exit
+apt install bc -y 
+apt install screen -y 
+apt install nano -y 
+apt install unzip -y 
+apt install lsof -y 
+apt install netstat -y 
+apt install net-tools -y 
+apt install dos2unix -y 
+apt install nload -y 
+apt install jq -y 
+apt install curl -y 
+apt install figlet -y 
+apt install python3 -y 
+apt install python -y 
+apt install python-pip -y 
+apt purge sslh -y
+echo "::ffff:d10e:46c0 sshplus.xyz" >> /etc/hosts
+echo "::ffff:d10e:46c0 https://sshplus.xyz" >> /etc/hosts
+echo "pre.megassh.shop https://sshplus.xyz" >> /etc/hosts
+echo "pre.megassh.shop sshplus.xyz" >> /etc/hosts
+echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
+sudo sysctl -p
+if [ ! -d "/etc/SSHPlus" ];
+then
+mkdir -p /etc/SSHPlus
+fi
+if [ ! -d "/etc/SSHPlus/bot-telegram" ];
+then
+mkdir -p /etc/SSHPlus/bot-telegram
+fi
+if [ ! -d "/etc/SSHPlus/senha" ];
+then
+mkdir -p /etc/SSHPlus/senha
+fi
+if [ ! -d "/etc/SSHPlus/userteste" ];
+then
+mkdir -p /etc/SSHPlus/userteste
+fi
+if [ ! -d "/opt/sshplus" ];
+then
+mkdir -p /opt/sshplus
+fi
+touch /etc/autostart
+cd /opt/sshplus
+wget --no-check-certificate -q https://pre.megassh.shop/scripts/sshplus.zip
+wget --no-check-certificate -q https://pre.megassh.shop/scripts/cert.crt
+mv cert.crt /usr/local/share/ca-certificates/
+update-ca-certificates
+apt install unzip -y
+unzip sshplus.zip
+rm sshplus.zip
+mv proxy.py /etc/SSHPlus
+mv wsproxy.py /etc/SSHPlus
+mv open.py /etc/SSHPlus
+echo "Penguin-Cracked-V1" > licenca.txt
+chmod 777 -R *
+echo "/opt/sshplus/sshplus" > /bin/menu
+chmod +x /bin/menu
+cd
+clear
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "By RP4321!" ; tput sgr0
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+echo ""
+echo ""
