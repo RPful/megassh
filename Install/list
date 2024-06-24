@@ -86,10 +86,11 @@ wget https://github.com/RPful/megassh/raw/main/Install/jq-linux64 >/dev/null 2>&
 chmod +x jq-linux64 && mv jq-linux64 $(which jq)
 service cron restart >/dev/null 2>&1
 service ssh restart >/dev/null 2>&1
-[[ -d /var/www/html/openvpn ]] && service apache2 restart >/dev/null 2>&1
+[[ -d /var/www/html/openvpn ]] dpkg --configure -a service apache2 restart >/dev/null 2>&1
 rm -rf $lst1/list >/dev/null 2>&1
 mkdir /opt/sshplus
 echo > /opt/sshplus/sshplus
+cd && dpkg --configure -a
 cd /etc/SSHPlus/ && wget https://raw.githubusercontent.com/RPful/megassh/main/Modulos/WebSocket && wget https://raw.githubusercontent.com/RPful/megassh/main/Modulos/pub.key && wget https://raw.githubusercontent.com/RPful/megassh/main/Modulos/priv.pem && chmod 777 WebSocket && cd sudo apt-get install lolcat && cd $HOME
 cd /etc/SSHPlus/ && bash <(curl https://raw.githubusercontent.com/endblack/DtWithMAIN/main/install.sh) && cd $HOME
 cd /etc/SSHPlus/ && wget https://raw.githubusercontent.com/RPful/megassh//main/Modulos/proxydt && chmod 777 proxydt && cd $HOME
