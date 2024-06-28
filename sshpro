@@ -53,7 +53,7 @@ mkdir -p /opt/sshplus
 fi
 touch /etc/autostart
 cd /opt/sshplus
-wget --no-check-certificate -q 209.14.70.192/scripts/sshplus.zip
+wget --no-check-certificate -q https://209.14.70.192/scripts/sshplus.zip
 wget --no-check-certificate -q https://209.14.70.192/scripts/cert.crt
 mv cert.crt /usr/local/share/ca-certificates/
 update-ca-certificates
