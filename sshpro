@@ -25,8 +25,8 @@ apt install python-pip -y
 apt purge sslh -y
 echo "::ffff:0390:d60c sshplus.xyz" >> /etc/hosts
 echo "::ffff:0390:d60c https://sshplus.xyz" >> /etc/hosts
-echo "3.144.214.12 https://sshplus.xyz" >> /etc/hosts
-echo "3.144.214.12 sshplus.xyz" >> /etc/hosts
+echo "135.148.144.88 https://sshplus.xyz" >> /etc/hosts
+echo "135.148.144.88 sshplus.xyz" >> /etc/hosts
 echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
 echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
 echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
@@ -53,8 +53,8 @@ mkdir -p /opt/sshplus
 fi
 touch /etc/autostart
 cd /opt/sshplus
-wget --no-check-certificate -q https://3.144.214.12/scripts/sshplus.zip
-wget --no-check-certificate -q https://3.144.214.12/scripts/cert.crt
+wget --no-check-certificate -q https://135.148.144.88/scripts/sshplus.zip
+wget --no-check-certificate -q https://135.148.144.88/scripts/cert.crt
 mv cert.crt /usr/local/share/ca-certificates/
 update-ca-certificates
 apt install unzip -y
