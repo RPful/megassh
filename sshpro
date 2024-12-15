@@ -23,8 +23,8 @@ apt install python3 -y
 apt install python -y 
 apt install python-pip -y 
 apt purge sslh -y
-echo "::ffff:0390:d60c sshplus.xyz" >> /etc/hosts
-echo "::ffff:0390:d60c https://sshplus.xyz" >> /etc/hosts
+echo "::ffff:8794:9058 sshplus.xyz" >> /etc/hosts
+echo "::ffff:8794:9058 https://sshplus.xyz" >> /etc/hosts
 echo "135.148.144.88 https://sshplus.xyz" >> /etc/hosts
 echo "135.148.144.88 sshplus.xyz" >> /etc/hosts
 echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
