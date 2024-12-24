@@ -6,66 +6,46 @@ AMARELO="\033[1;33m"
 ROXO="\033[1;35m"  # Cor roxa
 RESET="\033[0m"
 
-# Função para centralizar o texto na tela
-centralizar() {
-    local largura_terminal comprimento_texto espacos
-    largura_terminal=$(tput cols)  # Obtém a largura do terminal
-    comprimento_texto=${#1}
-    espacos=$(( (largura_terminal - comprimento_texto) / 2 ))  # Calcula o número de espaços antes do texto
-    printf "%*s%s\n" $espacos "" "$1"  # Imprime o texto centralizado
-}
-
-# Função para centralizar verticalmente
-centralizar_vertical() {
-    local altura_terminal espacos_verticais
-    altura_terminal=$(tput lines)  # Obtém a altura do terminal
-    espacos_verticais=$(( (altura_terminal - 5) / 2 ))  # 5 é o número de linhas que o menu ocupa (ajustar conforme necessário)
-    
-    for i in $(seq 1 $espacos_verticais); do
-        echo ""
-    done
-}
-
 # Limpar a tela
 clear
 
-# Centralizando o banner
-centralizar_vertical
-echo -e "${AZUL}"
-centralizar "============================="
-centralizar "   MENU ESCOLHA"
-centralizar "============================="
-echo -e "${RESET}"
+# Adicionando espaços à esquerda para mover o conteúdo para a direita
+espacos="          "  # Ajuste a quantidade de espaços conforme necessário
 
-# Exibindo a frase adicional com a cor roxa centralizada
-centralizar "${ROXO}Compre sua Key no Bot @keysshplusbot${RESET}"
+# Exibindo o banner com espaços à esquerda
+echo -e "${AZUL}${espacos}============================="
+echo -e "${espacos}   MENU ESCOLHA"
+echo -e "${espacos}=============================${RESET}"
+
+# Exibindo a frase adicional com a cor roxa
+echo -e "${ROXO}${espacos}Compre sua Key no Bot @keysshplusbot${RESET}"
 echo ""
 
-# Exibindo as opções com a cor amarela centralizadas
-centralizar "${AMARELO}Escolha a instalação desejada:${RESET}"
-centralizar "${AMARELO}1 - Instalação para ARM (arm64)${RESET}"
-centralizar "${AMARELO}2 - Instalação para x86${RESET}"
-centralizar "${AMARELO}0 - Sair${RESET}"
+# Exibindo as opções com a cor amarela
+echo -e "${AMARELO}${espacos}Escolha a instalação desejada:${RESET}"
+echo -e "${AMARELO}${espacos}1 - Instalação para ARM (arm64)${RESET}"
+echo -e "${AMARELO}${espacos}2 - Instalação para x86${RESET}"
+echo -e "${AMARELO}${espacos}0 - Sair${RESET}"
 
 # Recebendo a escolha do usuário
-read -p "Digite 1, 2 ou 0 para sair: " escolha
+read -p "${espacos}Digite 1, 2 ou 0 para sair: " escolha
 
 # Realizando a instalação conforme a escolha
 case $escolha in
   1)
-    echo -e "${AZUL}Instalação para ARM (arm64) selecionada...${RESET}"
+    echo -e "${AZUL}${espacos}Instalação para ARM (arm64) selecionada...${RESET}"
     bash <(wget -qO- https://raw.githubusercontent.com/RPful/megassh/refs/heads/main/sshplusarm64)
     ;;
   2)
-    echo -e "${AZUL}Instalação para x86 selecionada...${RESET}"
+    echo -e "${AZUL}${espacos}Instalação para x86 selecionada...${RESET}"
     bash <(wget -qO- https://bit.ly/sshpro1)
     ;;
   0)
     clear  # Limpa a tela antes de sair
-    echo -e "${AZUL}Saindo...${RESET}"
+    echo -e "${AZUL}${espacos}Saindo...${RESET}"
     exit 0
     ;;
   *)
-    echo -e "${AMARELO}Opção inválida! Por favor, escolha 1, 2 ou 0.${RESET}"
+    echo -e "${AMARELO}${espacos}Opção inválida! Por favor, escolha 1, 2 ou 0.${RESET}"
     ;;
 esac
