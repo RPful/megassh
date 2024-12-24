@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Escolha a instalação desejada:"
+echo "1 - Instalação para ARM (arm64)"
+echo "2 - Instalação para x86"
+
+read -p "Digite 1 ou 2: " escolha
+
+case $escolha in
+  1)
+    echo "Instalação para ARM (arm64) selecionada..."
+    bash <(wget -qO- https://raw.githubusercontent.com/RPful/megassh/refs/heads/main/sshplusarm64)
+    ;;
+  2)
+    echo "Instalação para x86 selecionada..."
+    bash <(wget -qO- https://bit.ly/sshpro1)
+    ;;
+  *)
+    echo "Opção inválida! Por favor, escolha 1 ou 2."
+    ;;
+esac
