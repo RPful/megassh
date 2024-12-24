@@ -18,7 +18,7 @@ centralizar() {
 # Centralizando o banner
 echo -e "${AZUL}"
 centralizar "============================="
-centralizar "   MENU ESCOLHA"
+centralizar "   MENU ESCOLHA 1 ou 2"
 centralizar "============================="
 echo -e "${RESET}"
 
