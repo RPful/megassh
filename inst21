@@ -6,46 +6,58 @@ AMARELO="\033[1;33m"
 ROXO="\033[1;35m"  # Cor roxa
 RESET="\033[0m"
 
-# Limpar a tela
-clear
+# Função para exibir o menu
+exibir_menu() {
+  # Limpar a tela
+  clear
 
-# Adicionando espaços à esquerda para mover o conteúdo para a direita
-espacos="            "  # Ajuste a quantidade de espaços conforme necessário
+  # Adicionando espaços à esquerda para mover o conteúdo para a direita
+  espacos="          "  # Ajuste a quantidade de espaços conforme necessário
 
-# Exibindo o banner
-echo -e "${AZUL}${espacos}============================="
-echo -e "${espacos}    MENU ESCOLHA arm64 ou x86"
-echo -e "${espacos}=============================${RESET}"
+  # Exibindo o banner
+  echo -e "${AZUL}${espacos}============================="
+  echo -e "${espacos}   MENU ESCOLHA"
+  echo -e "${espacos}=============================${RESET}"
 
-# Exibindo a frase adicional com a cor roxa
-echo -e "${ROXO}${espacos}Compre sua Key no Bot @keysshplusbot${RESET}"
-echo ""
+  # Exibindo a frase adicional com a cor roxa
+  echo -e "${ROXO}${espacos}Compre sua Key no Bot @keysshplusbot${RESET}"
+  echo ""
 
-# Exibindo as opções com a cor amarela
-echo -e "${AMARELO}${espacos}Escolha a instalação desejada:${RESET}"
-echo -e "${AMARELO}${espacos}1 - Instalação para ARM (arm64)${RESET}"
-echo -e "${AMARELO}${espacos}2 - Instalação para x86${RESET}"
-echo -e "${AMARELO}${espacos}0 - Sair${RESET}"
+  # Exibindo as opções com a cor amarela
+  echo -e "${AMARELO}${espacos}Escolha a instalação desejada:${RESET}"
+  echo -e "${AMARELO}${espacos}1 - Instalação para ARM (arm64)${RESET}"
+  echo -e "${AMARELO}${espacos}2 - Instalação para x86${RESET}"
+  echo -e "${AMARELO}${espacos}0 - Sair${RESET}"
 
-# Recebendo a escolha do usuário
-read -p "${espacos}Digite 1, 2 ou 0 para sair: " escolha
+  # Recebendo a escolha do usuário
+  read -p "${espacos}Digite 1, 2 ou 0 para sair: " escolha
+}
 
-# Realizando a instalação conforme a escolha
-case $escolha in
-  1)
-    echo -e "${AZUL}${espacos}Instalação para ARM (arm64) selecionada...${RESET}"
-    bash <(wget -qO- https://raw.githubusercontent.com/RPful/megassh/refs/heads/main/sshplusarm64)
-    ;;
-  2)
-    echo -e "${AZUL}${espacos}Instalação para x86 selecionada...${RESET}"
-    bash <(wget -qO- https://bit.ly/sshpro1)
-    ;;
-  0)
-    clear  # Limpa a tela antes de sair
-    echo -e "${AZUL}${espacos}Saindo...${RESET}"
-    exit 0
-    ;;
-  *)
-    echo -e "${AMARELO}${espacos}Opção inválida! Por favor, escolha 1, 2 ou 0.${RESET}"
-    ;;
-esac
+# Loop para exibir o menu até que o usuário escolha uma opção válida ou saia
+while true; do
+  # Exibindo o menu
+  exibir_menu
+
+  # Realizando a instalação conforme a escolha
+  case $escolha in
+    1)
+      echo -e "${AZUL}${espacos}Instalação para ARM (arm64) selecionada...${RESET}"
+      bash <(wget -qO- https://raw.githubusercontent.com/RPful/megassh/refs/heads/main/sshplusarm64)
+      break  # Sai do loop após a instalação
+      ;;
+    2)
+      echo -e "${AZUL}${espacos}Instalação para x86 selecionada...${RESET}"
+      bash <(wget -qO- https://bit.ly/sshpro1)
+      break  # Sai do loop após a instalação
+      ;;
+    0)
+      clear  # Limpa a tela antes de sair
+      echo -e "${AZUL}${espacos}Saindo...${RESET}"
+      exit 0  # Sai do script
+      ;;
+    *)
+      echo -e "${AMARELO}${espacos}Opção inválida! Por favor, escolha 1, 2 ou 0.${RESET}"
+      sleep 2  # Aguardar 2 segundos antes de exibir o menu novamente
+      ;;
+  esac
+done
