@@ -6,31 +6,42 @@ AMARELO="\033[1;33m"
 ROXO="\033[1;35m"  # Cor roxa
 RESET="\033[0m"
 
-# Função para centralizar o texto
+# Função para centralizar o texto na tela
 centralizar() {
-    local largura_terminal
+    local largura_terminal comprimento_texto espacos
     largura_terminal=$(tput cols)  # Obtém a largura do terminal
-    texto=$1
-    comprimento_texto=${#texto}
+    comprimento_texto=${#1}
     espacos=$(( (largura_terminal - comprimento_texto) / 2 ))  # Calcula o número de espaços antes do texto
-    printf "%*s%s\n" $espacos "" "$texto"  # Imprime o texto centralizado
+    printf "%*s%s\n" $espacos "" "$1"  # Imprime o texto centralizado
+}
+
+# Função para centralizar verticalmente
+centralizar_vertical() {
+    local altura_terminal espacos_verticais
+    altura_terminal=$(tput lines)  # Obtém a altura do terminal
+    espacos_verticais=$(( (altura_terminal - 5) / 2 ))  # 5 é o número de linhas que o menu ocupa (ajustar conforme necessário)
+    
+    for i in $(seq 1 $espacos_verticais); do
+        echo ""
+    done
 }
 
 # Limpar a tela
 clear
 
 # Centralizando o banner
+centralizar_vertical
 echo -e "${AZUL}"
 centralizar "============================="
 centralizar "   MENU ESCOLHA"
 centralizar "============================="
 echo -e "${RESET}"
 
-# Centralizando a frase adicional com a cor roxa
+# Exibindo a frase adicional com a cor roxa centralizada
 centralizar "${ROXO}Compre sua Key no Bot @keysshplusbot${RESET}"
 echo ""
 
-# Centralizando as opções com a cor amarela
+# Exibindo as opções com a cor amarela centralizadas
 centralizar "${AMARELO}Escolha a instalação desejada:${RESET}"
 centralizar "${AMARELO}1 - Instalação para ARM (arm64)${RESET}"
 centralizar "${AMARELO}2 - Instalação para x86${RESET}"
