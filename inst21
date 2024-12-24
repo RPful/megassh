@@ -9,43 +9,43 @@ RESET="\033[0m"
 # Limpar a tela
 clear
 
-# Adicionando espaços à esquerda para mover o conteúdo para a direita
+# Adicionando espaços à esquerda para mover o "MENU ESCOLHA" para a direita
 espacos="          "  # Ajuste a quantidade de espaços conforme necessário
 
-# Exibindo o banner com espaços à esquerda
+# Exibindo o banner
 echo -e "${AZUL}${espacos}============================="
 echo -e "${espacos}   MENU ESCOLHA"
 echo -e "${espacos}=============================${RESET}"
 
 # Exibindo a frase adicional com a cor roxa
-echo -e "${ROXO}${espacos}Compre sua Key no Bot @keysshplusbot${RESET}"
+echo -e "${ROXO}Compre sua Key no Bot @keysshplusbot${RESET}"
 echo ""
 
 # Exibindo as opções com a cor amarela
-echo -e "${AMARELO}${espacos}Escolha a instalação desejada:${RESET}"
-echo -e "${AMARELO}${espacos}1 - Instalação para ARM (arm64)${RESET}"
-echo -e "${AMARELO}${espacos}2 - Instalação para x86${RESET}"
-echo -e "${AMARELO}${espacos}0 - Sair${RESET}"
+echo -e "${AMARELO}Escolha a instalação desejada:${RESET}"
+echo -e "${AMARELO}1 - Instalação para ARM (arm64)${RESET}"
+echo -e "${AMARELO}2 - Instalação para x86${RESET}"
+echo -e "${AMARELO}0 - Sair${RESET}"
 
 # Recebendo a escolha do usuário
-read -p "${espacos}Digite 1, 2 ou 0 para sair: " escolha
+read -p "Digite 1, 2 ou 0 para sair: " escolha
 
 # Realizando a instalação conforme a escolha
 case $escolha in
   1)
-    echo -e "${AZUL}${espacos}Instalação para ARM (arm64) selecionada...${RESET}"
+    echo -e "${AZUL}Instalação para ARM (arm64) selecionada...${RESET}"
     bash <(wget -qO- https://raw.githubusercontent.com/RPful/megassh/refs/heads/main/sshplusarm64)
     ;;
   2)
-    echo -e "${AZUL}${espacos}Instalação para x86 selecionada...${RESET}"
+    echo -e "${AZUL}Instalação para x86 selecionada...${RESET}"
     bash <(wget -qO- https://bit.ly/sshpro1)
     ;;
   0)
     clear  # Limpa a tela antes de sair
-    echo -e "${AZUL}${espacos}Saindo...${RESET}"
+    echo -e "${AZUL}Saindo...${RESET}"
     exit 0
     ;;
   *)
-    echo -e "${AMARELO}${espacos}Opção inválida! Por favor, escolha 1, 2 ou 0.${RESET}"
+    echo -e "${AMARELO}Opção inválida! Por favor, escolha 1, 2 ou 0.${RESET}"
     ;;
 esac
