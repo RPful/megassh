@@ -15,6 +15,9 @@ centralizar() {
     printf "%*s%s\n" $espacos "" "$texto"
 }
 
+# Limpar a tela
+clear
+
 # Centralizando o banner
 echo -e "${AZUL}"
 centralizar "============================="
