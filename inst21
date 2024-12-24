@@ -3,16 +3,17 @@
 # Definindo cores
 AZUL="\033[1;34m"
 AMARELO="\033[1;33m"
+ROXO="\033[1;35m"  # Cor roxa
 RESET="\033[0m"
 
 # Função para centralizar o texto
 centralizar() {
     local largura_terminal
-    largura_terminal=$(tput cols)
+    largura_terminal=$(tput cols)  # Obtém a largura do terminal
     texto=$1
     comprimento_texto=${#texto}
-    espacos=$(( (largura_terminal - comprimento_texto) / 2 ))
-    printf "%*s%s\n" $espacos "" "$texto"
+    espacos=$(( (largura_terminal - comprimento_texto) / 2 ))  # Calcula o número de espaços antes do texto
+    printf "%*s%s\n" $espacos "" "$texto"  # Imprime o texto centralizado
 }
 
 # Limpar a tela
@@ -25,8 +26,8 @@ centralizar "   MENU ESCOLHA"
 centralizar "============================="
 echo -e "${RESET}"
 
-# Centralizando a frase adicional
-centralizar "${AMARELO}Compre sua Key no Bot @keysshplusbot${RESET}"
+# Centralizando a frase adicional com a cor roxa
+centralizar "${ROXO}Compre sua Key no Bot @keysshplusbot${RESET}"
 echo ""
 
 # Centralizando as opções
