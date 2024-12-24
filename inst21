@@ -14,7 +14,7 @@ espacos="          "  # Ajuste a quantidade de espaços conforme necessário
 
 # Exibindo o banner
 echo -e "${AZUL}${espacos}============================="
-echo -e "${espacos}           MENU ESCOLHA arm64 ou x86"
+echo -e "${espacos}     MENU ESCOLHA arm64 ou x86"
 echo -e "${espacos}=============================${RESET}"
 
 # Exibindo a frase adicional com a cor roxa
