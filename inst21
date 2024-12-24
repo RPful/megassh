@@ -10,11 +10,11 @@ RESET="\033[0m"
 clear
 
 # Adicionando espaços à esquerda para mover o "MENU ESCOLHA" para a direita
-espacos="        "  # Ajuste a quantidade de espaços conforme necessário
+espacos="          "  # Ajuste a quantidade de espaços conforme necessário
 
 # Exibindo o banner
 echo -e "${AZUL}${espacos}============================="
-echo -e "${espacos}   MENU ESCOLHA "
+echo -e "${espacos}   MENU ESCOLHA"
 echo -e "${espacos}=============================${RESET}"
 
 # Exibindo a frase adicional com a cor roxa
