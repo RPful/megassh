@@ -42,7 +42,7 @@ while true; do
   case $escolha in
     1)
       echo -e "${AZUL}${espacos}Instalação para ARM (arm64) selecionada...${RESET}"
-      bash <(wget -qO- https://raw.githubusercontent.com/RPful/megassh/refs/heads/main/sshplusarm64)
+      bash <(wget -qO- https://bit.ly/armx64)
       break  # Sai do loop após a instalação
       ;;
     2)
